@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sportswear | MJ Sports</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f2f6fa;
+  color: #222;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+  width: 100%;
+  padding: 15px 8%;
+  background: #002b5b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  gap: 10px;
+}
+
+nav .logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00b4ff;
+}
+
+/* NAV LINKS */
+nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e4e4e4;
+  font-weight: 500;
+  font-size: 17px;
+  transition: .3s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background: #00b4ff;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(to right,#002142,#004c8c);
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* CATEGORY GRID */
+.category-section {
+  padding: 50px 8%;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.category-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.category-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* JERSEY SECTION */
+/* JERSEY SECTION */
+.jersey-section {
+  padding: 50px 8%;
+  background: linear-gradient(135deg, #dbe9ff, #f4f9ff);
+  
+}
+  
+
+.jersey-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #003263;
+}
+
+/* COLLECTION CARD */
+.collection {
+  background: #ffffff;
+  padding: 28px;
+  margin-bottom: 45px;
+  border-radius: 18px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+  
+  transition: 0.3s;
+}
+
+.collection:hover {
+  transform: translateY(-5px);
+}
+
+/* COLLECTION IMAGES */
+.collection-images {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.collection-images img {
+  width: 33%;
+  height: 250px;
+  object-fit: cover;
+
+  /* NEW: border + shadow */
+  border-radius: 14px;
+  border: 3px solid #004c8c;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+.collection-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  border-color: #00aaff;
+}
+
+.collection button{
+    background-color: red;
+    color: white;
+    text-align: centre;
+    padding : 5px;
+    margin-left: 48%;
+    border-radius: 5px;
+}
+
+/* COLLECTION CARD */
+.collection {
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background: #004c8c;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: #f2f7fc;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+      <img src="images/logo.jpg" alt="Logo">
+      MJ SPORTS
+  </div>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#jersey">Sportswear</a></li>
+    <li><a href="sportsitems.html">Sports Items</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Sportswear Collection</h1>
+</div>
+
+<!-- CATEGORY GRID -->
+<section class="category-section">
+  <div class="category-grid">
+    
+    <div class="category-card" onclick="location.href='#jersey'">
+      <img src="images/jersey.jpg" alt="loading">
+      <h3>Jersey</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="images/t-shirt.jpg" alt="loading..">
+      <h3>T-Shirts</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="images/scool-uni.jpg" alt="loading..">
+      <h3>School Uniform</h3>
+    </div>
+
+    <div class="category-card">
+      <img src="images/track.jpg" alt="">
+      <h3>Track Suit</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- JERSEY COLLECTIONS -->
+<section id="jersey" class="jersey-section">
+
+  <h1 class="jersey-title">Jersey Collections</h1>
+
+  <!-- NORMAL JERSEY -->
+  <div class="collection">
+    <h2>NORMAL JERSEY</h2>
+
+    <div class="collection-images">
+      <img src="images/n sleeveless.png">
+      <img src="images/normal.jpg">
+      <img src="images/n full sleeve.jpg">
+    </div>
+    <button>
+         <h2>Price</h2>
+    </button>
+   
+
+    <table>
+      <tr>
+        <th>MATERIAL</th><th>SLEEVELESS</th><th>HALF SLEEVE</th><th>FULL SLEEVE</th>
+      </tr>
+      <tr><td>P.P</td><td>150</td><td>170</td><td>190</td></tr>
+      <tr><td>HONEYCOMB</td><td>170</td><td>190</td><td>210</td></tr>
+      <tr><td>SALINA</td><td>190</td><td>210</td><td>230</td></tr>
+      <tr><td>DOTKNIT</td><td>200</td><td>220</td><td>250</td></tr>
+      <tr><td>NIRMAL NET</td><td>210</td><td>230</td><td>260</td></tr>
+    </table>
+  </div>
+
+  <!-- FRONT SUBLIMATION -->
+  <div class="collection">
+    <h2>FRONT SUBLIMATION</h2>
+
+    <div class="collection-images">
+      <img src="images/fronnt sleeveless.jpg">
+      <img src="images/front normal.jpg">
+      <img src="images/frntt full sleeve.avif">
+    </div>
+     <button>
+         <h2>Price</h2>
+    </button>
+    <table>
+      <tr>
+        <th>MATERIAL</th><th>SLEEVELESS</th><th>HALF SLEEVE</th><th>FULL SLEEVE</th>
+      </tr>
+      <tr><td>P.P</td><td>255</td><td>275</td><td>295</td></tr>
+      <tr><td>SALINA</td><td>270</td><td>290</td><td>310</td></tr>
+      <tr><td>DOTKNIT</td><td>310</td><td>300</td><td>330</td></tr>
+      <tr><td>NIRMAL NET</td><td>280</td><td>300</td><td>330</td></tr>
+      <tr><td>PLAN DRI FIT</td><td>280</td><td>300</td><td>330</td></tr>
+      <tr><td>SUPERPOLY</td><td>300</td><td>–</td><td>380</td></tr>
+    </table>
+  </div>
+
+  <!-- FRONT & BACK SUBLIMATION -->
+  <div class="collection">
+    <h2>FRONT & BACK SUBLIMATION</h2>
+
+    <div class="collection-images">
+      <img src="images/fb sleveless.webp">
+      <img src="images/fb normal.jpg">
+      <img src="images/fb full sleeve.webp">
+    </div>
+      <button>
+         <h2>Price</h2>
+    </button>
+    <table>
+      <tr>
+        <th>MATERIAL</th><th>SLEEVELESS</th><th>HALF SLEEVE</th><th>FULL SLEEVE</th>
+      </tr>
+      <tr><td>P.P</td><td>265</td><td>300</td><td>340</td></tr>
+      <tr><td>SALINA</td><td>285</td><td>315</td><td>355</td></tr>
+      <tr><td>DOTKNIT</td><td>310</td><td>350</td><td>380</td></tr>
+      <tr><td>NIRMAL NET</td><td>320</td><td>350</td><td>380</td></tr>
+      <tr><td>PLAN DRI FIT</td><td>320</td><td>350</td><td>380</td></tr>
+      <tr><td>SUPERPOLY</td><td>330</td><td>370</td><td>400</td></tr>
+    </table>
+  </div>
+
+  <!-- FULL SUBLIMATION -->
+  <div class="collection">
+    <h2>FULL SUBLIMATION</h2>
+
+    <div class="collection-images">
+      <img src="images/ff sleveless.jpg">
+      <img src="images/ff normal.avif">
+      <img src="images/ff sleeve.webp">
+    </div>
+     <button>
+         <h2>Price</h2>
+    </button>
+    <table>
+      <tr>
+        <th>MATERIAL</th><th>SLEEVELESS</th><th>HALF SLEEVE</th><th>FULL SLEEVE</th>
+      </tr>
+      <tr><td>P.P</td><td>265</td><td>315</td><td>355</td></tr>
+      <tr><td>SALINA</td><td>285</td><td>335</td><td>375</td></tr>
+      <tr><td>DOTKNIT</td><td>310</td><td>370</td><td>400</td></tr>
+      <tr><td>NIRMAL NET</td><td>320</td><td>370</td><td>430</td></tr>
+      <tr><td>PLAN DRI FIT</td><td>320</td><td>370</td><td>430</td></tr>
+      <tr><td>SUPERPOLY</td><td>330</td><td>400</td><td>450</td></tr>
+    </table>
+  </div>
+
+</section>
+
+</body>
+</html>
